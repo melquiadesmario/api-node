@@ -3,6 +3,9 @@ const express = require('express');
 const app = express();
 
 app.get('/projects', (request, response) => {
+    const { title } = request.query;
+    console.log(title);
+
     return response.json([
         'Projeto 1',
         'Projeto 2',
